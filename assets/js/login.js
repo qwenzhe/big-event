@@ -60,7 +60,7 @@ $(function() {
         // 快速获取表单中的数据
         data: $(this).serialize(),
         success: function(res) {
-          if (res.status == 0) {
+          if (res.status !== 0) {
             return layer.msg('登录失败！')
           }
           layer.msg('登录成功！')
